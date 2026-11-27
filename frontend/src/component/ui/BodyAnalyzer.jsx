@@ -37,6 +37,7 @@ const BodyAnalyzer = () => {
     };
 
     try {
+      const API = import.meta.env.VITE_API_URL;
       // Call the NEW backend endpoint with our JSON payload
       const response = await axios.post(
         "http://localhost:8000/generate-plan/", // <-- This is our new URL
