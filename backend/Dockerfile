@@ -1,7 +1,7 @@
 FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY . .
-RUN mvn -DskipTests package
+RUN mvn -B -s settings.xml -DskipTests -Dmaven.wagon.http.retryHandler.count=5 package
 
 FROM eclipse-temurin:21-jre
 WORKDIR /app
