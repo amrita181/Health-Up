@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// This is the base URL for your Python backend
-const API_URL = "http://localhost:8000";
+// This is the base URL for your frontend's backend
+const API_URL = "https://health-up-backend-fvot.onrender.com/";
 
 /**
  * Sends a food name to the backend, which finds it on the USDA API
@@ -15,7 +15,7 @@ export const logFoodItem = async (foodName) => {
   }
 
   try {
-    // This calls your FastAPI endpoint: POST http://localhost:8000/api/log-food/?food_name=...
+    // This calls your FastAPI endpoint: POST https://health-up-backend-fvot.onrender.com//api/log-food/?food_name=...
     const response = await axios.post(
       `${API_URL}/api/log-food/`,
       null, // No request body (POST body is null)

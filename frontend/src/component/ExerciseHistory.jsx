@@ -7,7 +7,7 @@ function ExerciseHistory({ userId }) {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/history/${userId}`);
+        const res = await axios.get(`https://health-up-backend-fvot.onrender.com//history/${userId}`);
         setHistory(res.data.history);
       } catch (error) {
         console.error("Failed to load history:", error);
