@@ -6,10 +6,6 @@ import healthbackend.service.BodyAnalysisService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = {
-        "http://localhost:3000",
-        "http://localhost:5173"
-})
 public class BodyAnalysisController {
 
     private final BodyAnalysisService bodyAnalysisService;
