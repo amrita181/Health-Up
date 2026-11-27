@@ -17,7 +17,7 @@ function BodyPicUploader() {
 
     try {
       const res = await axios.post(
-        "https://health-up-backend-fvot.onrender.com//upload-body-pic/",
+        "https://health-up-backend-fvot.onrender.com/upload-body-pic/",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

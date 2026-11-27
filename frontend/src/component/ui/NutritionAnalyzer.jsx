@@ -19,7 +19,7 @@ function NutritionAnalyzer({ showPopup }) {
     try {
       // This is the new backend endpoint you need to create
       const res = await axios.post(
-        "https://health-up-backend-fvot.onrender.com//analyze-food-image/",
+        "https://health-up-backend-fvot.onrender.com/analyze-food-image/",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

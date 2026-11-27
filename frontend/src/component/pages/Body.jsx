@@ -23,7 +23,7 @@ function Body() {
   const fetchHistory = useCallback(async () => {
     if (!userUID) return;
     try {
-      const res = await axios.get(`https://health-up-backend-fvot.onrender.com//history/${userUID}/`);
+      const res = await axios.get(`https://health-up-backend-fvot.onrender.com/history/${userUID}/`);
       // setHistory(res.data.history);
       // This is the NEW, FIXED line:
       setHistory(res.data);
@@ -57,7 +57,7 @@ function Body() {
     // No need to send it from the frontend.
 
     try {
-      await axios.post("https://health-up-backend-fvot.onrender.com//track-exercise/", payload);
+      await axios.post("https://health-up-backend-fvot.onrender.com/track-exercise/", payload);
       showPopup("Success!", "Exercise logged successfully.");
       setView("main");
       setSelectedExercise(null);

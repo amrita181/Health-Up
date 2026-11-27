@@ -40,7 +40,7 @@ const BodyAnalyzer = () => {
       const API = import.meta.env.VITE_API_URL;
       // Call the NEW backend endpoint with our JSON payload
       const response = await axios.post(
-        "https://health-up-backend-fvot.onrender.com//generate-plan/", // <-- This is our new URL
+        "https://health-up-backend-fvot.onrender.com/generate-plan/", // <-- This is our new URL
         payload // <-- This is our real JSON data, not FormData
       );
 
